@@ -1,6 +1,6 @@
 import { build, emptyDir } from "https://deno.land/x/dnt@0.39.0/mod.ts";
 
-const name = "errorutil";
+const name = "@lambdalisue/errorutil";
 const version = Deno.args[0];
 if (!version) {
   throw new Error("No version argument is specified");

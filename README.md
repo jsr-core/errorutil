@@ -1,6 +1,6 @@
 # errorutil
 
-[![npm](http://img.shields.io/badge/available%20on-npm-lightgrey.svg?logo=npm&logoColor=white)](https://www.npmjs.com/package/errorutil)
+[![npm](http://img.shields.io/badge/available%20on-npm-lightgrey.svg?logo=npm&logoColor=white)](https://www.npmjs.com/package/@lambdalisue/errorutil)
 [![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/errorutil)
 [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/errorutil/mod.ts)
 [![Test](https://github.com/lambdalisue/deno-errorutil/workflows/Test/badge.svg)](https://github.com/lambdalisue/deno-errorutil/actions?query=workflow%3ATest)
