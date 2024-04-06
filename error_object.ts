@@ -1,7 +1,4 @@
-import {
-  is,
-  PredicateType,
-} from "https://deno.land/x/unknownutil@v3.11.0/mod.ts";
+import { is, PredicateType } from "@core/unknownutil";
 
 export const isErrorObject = is.ObjectOf({
   proto: is.String,

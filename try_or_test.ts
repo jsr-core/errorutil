@@ -1,8 +1,4 @@
-import {
-  assertEquals,
-  assertRejects,
-  assertThrows,
-} from "https://deno.land/std@0.210.0/assert/mod.ts";
+import { assertEquals, assertRejects, assertThrows } from "@std/assert";
 import { raise } from "./raise.ts";
 import { tryOr, tryOrElse } from "./try_or.ts";
 
