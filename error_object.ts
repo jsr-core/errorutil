@@ -1,14 +1,20 @@
-import { is, PredicateType } from "@core/unknownutil";
+import { is, type Predicate } from "@core/unknownutil";
 
-export const isErrorObject = is.ObjectOf({
+export type ErrorObject = {
+  proto: string;
+  name: string;
+  message: string;
+  stack?: string;
+  attributes: Record<string, unknown>;
+};
+
+export const isErrorObject: Predicate<ErrorObject> = is.ObjectOf({
   proto: is.String,
   name: is.String,
   message: is.String,
   stack: is.OptionalOf(is.String),
   attributes: is.Record,
 });
-
-export type ErrorObject = PredicateType<typeof isErrorObject>;
 
 /**
  * Convert an error to an error object
