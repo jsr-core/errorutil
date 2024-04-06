@@ -1,7 +1,4 @@
-import {
-  assertEquals,
-  assertInstanceOf,
-} from "https://deno.land/std@0.210.0/assert/mod.ts";
+import { assertEquals, assertInstanceOf } from "@std/assert";
 import { fromErrorObject, toErrorObject } from "./error_object.ts";
 
 class CustomError extends Error {

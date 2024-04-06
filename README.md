@@ -1,7 +1,8 @@
 # errorutil
 
+[![jsr](https://img.shields.io/jsr/v/%40lambdalisue/errorutil?logo=javascript&logoColor=white)](https://jsr.io/@lambdalisue/errorutil)
+[![denoland](https://img.shields.io/github/v/release/lambdalisue/deno-errorutil?logo=deno&label=denoland)](https://github.com/lambdalisue/deno-errorutil/releases)
 [![npm](http://img.shields.io/badge/available%20on-npm-lightgrey.svg?logo=npm&logoColor=white)](https://www.npmjs.com/package/@lambdalisue/errorutil)
-[![deno land](http://img.shields.io/badge/available%20on-deno.land/x-lightgrey.svg?logo=deno)](https://deno.land/x/errorutil)
 [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/errorutil/mod.ts)
 [![Test](https://github.com/lambdalisue/deno-errorutil/workflows/Test/badge.svg)](https://github.com/lambdalisue/deno-errorutil/actions?query=workflow%3ATest)
 [![npm version](https://badge.fury.io/js/@lambdalisue%2Ferrorutil.svg)](https://badge.fury.io/js/@lambdalisue%2Ferrorutil)

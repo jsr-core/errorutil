@@ -11,6 +11,7 @@ on:
     branches:
       - main
   pull_request:
+  workflow_dispatch:
 
 jobs:
   check:
@@ -39,6 +40,9 @@ jobs:
         run: |
           deno task test
         timeout-minutes: 5
+      - name: JSR publish (dry-run)
+        run: |
+          deno publish --dry-run
 
   build-npm:
     runs-on: ubuntu-latest

@@ -1,4 +1,4 @@
-import { assertThrows } from "https://deno.land/std@0.210.0/assert/mod.ts";
+import { assertThrows } from "@std/assert";
 import { raise } from "./raise.ts";
 
 Deno.test("raise", () => {
