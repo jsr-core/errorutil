@@ -1,4 +1,7 @@
 {
+  "name": "@lambdalisue/errorutil",
+  "version": "0.0.0",
+  "exports": "./mod.ts",
   "tasks": {
     "build-npm": "deno run -A scripts/build_npm.ts $(git describe --tags --always --dirty)",
     "check": "deno check ./**/*.ts",
