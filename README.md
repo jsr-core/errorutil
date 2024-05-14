@@ -8,20 +8,6 @@ A utility pack for handling error.
 
 [deno]: https://deno.land/
 
-> [!WARNING]
->
-> The package on [deno.land] and [npm] is deprecated. Use the package on
-> [jsr.io] instead.
->
-> ```
-> $ deno add @lambdalisue/errorutil
-> $ npx jsr add @lambdalisue/errorutil
-> ```
-
-[deno.land]: https://deno.land/x/errorutil
-[npm]: https://www.npmjs.com/package/@lambdalisue/errorutil
-[jsr.io]: https://jsr.io/@lambdalisue/errorutil
-
 ## License
 
 The code follows MIT license written in [LICENSE](./LICENSE). Contributors need
