@@ -1,7 +1,15 @@
 {
   "name": "@lambdalisue/errorutil",
   "version": "0.0.0",
-  "exports": "./mod.ts",
+  "exports": {
+    ".": "./mod.ts",
+    "./error-object": "./error_object.ts",
+    "./raise": "./raise.ts",
+    "./try-or": "./try_or.ts",
+    "./try-or-else": "./try_or_else.ts",
+    "./unimplemented": "./unimplemented.ts",
+    "./unreachable": "./unreachable.ts"
+  },
   "exclude": [
     ".coverage",
     "npm"
@@ -16,6 +24,12 @@
     "update:commit": "deno task -q update --commit --pre-commit=fmt,lint"
   },
   "imports": {
-    "https://deno.land/x/errorutil@$MODULE_VERSION/": "./"
+    "@lambdalisue/errorutil": "./mod.ts",
+    "@lambdalisue/errorutil/error-object": "./error_object.ts",
+    "@lambdalisue/errorutil/raise": "./raise.ts",
+    "@lambdalisue/errorutil/try-or": "./try_or.ts",
+    "@lambdalisue/errorutil/try-or-else": "./try_or_else.ts",
+    "@lambdalisue/errorutil/unimplemented": "./unimplemented.ts",
+    "@lambdalisue/errorutil/unreachable": "./unreachable.ts"
   }
 }
