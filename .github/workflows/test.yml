@@ -41,8 +41,15 @@ jobs:
           deno-version: ${{ env.DENO_VERSION }}
       - name: Test
         run: |
-          deno task test
+          deno task test:coverage
         timeout-minutes: 5
+      - run: |
+          deno task coverage --lcov > coverage.lcov
+      - uses: codecov/codecov-action@v4
+        with:
+          os: ${{ runner.os }}
+          files: ./coverage.lcov
+          token: ${{ secrets.CODECOV_TOKEN }}
 
   build-npm:
     runs-on: ubuntu-latest
