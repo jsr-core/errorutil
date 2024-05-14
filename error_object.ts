@@ -1,4 +1,4 @@
-import { is, type Predicate } from "jsr:@core/unknownutil";
+import { is } from "jsr:@core/unknownutil";
 
 export type ErrorObject = {
   proto: string;
@@ -8,7 +8,7 @@ export type ErrorObject = {
   attributes: Record<string, unknown>;
 };
 
-export const isErrorObject: Predicate<ErrorObject> = is.ObjectOf({
+export const isErrorObject: (x: unknown) => x is ErrorObject = is.ObjectOf({
   proto: is.String,
   name: is.String,
   message: is.String,
