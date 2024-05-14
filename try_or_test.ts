@@ -1,4 +1,8 @@
-import { assertEquals, assertRejects, assertThrows } from "jsr:@std/assert";
+import {
+  assertEquals,
+  assertRejects,
+  assertThrows,
+} from "jsr:@std/assert@0.225.1";
 import { raise } from "./raise.ts";
 import { tryOr, tryOrElse } from "./try_or.ts";
 

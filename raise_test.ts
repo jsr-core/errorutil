@@ -1,4 +1,4 @@
-import { assertThrows } from "jsr:@std/assert";
+import { assertThrows } from "jsr:@std/assert@0.225.1";
 import { raise } from "./raise.ts";
 
 Deno.test("raise", () => {
