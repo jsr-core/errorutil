@@ -19,7 +19,7 @@ export class UnreachableError extends Error {
  * For example, the following code passed type checking.
  *
  * ```ts
- * import { unreachable } from "./unreachable.ts";
+ * import { unreachable } from "https://deno.land/x/errorutil@$MODULE_VERSION/unreachable.ts";
  *
  * type Animal = "dog" | "cat";
  *
@@ -41,7 +41,7 @@ export class UnreachableError extends Error {
  * But the following code because a case for "bird" is missing.
  *
  * ```ts
- * import { unreachable } from "./unreachable.ts";
+ * import { unreachable } from "https://deno.land/x/errorutil@$MODULE_VERSION/unreachable.ts";
  *
  * type Animal = "dog" | "cat" | "bird";
  *

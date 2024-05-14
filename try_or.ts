@@ -2,8 +2,8 @@
  * Try to execute a function and return the result or a default value.
  *
  * ```ts
- * import { tryOr } from "./try_or.ts";
- * import { raise } from "./raise.ts";
+ * import { tryOr } from "https://deno.land/x/errorutil@$MODULE_VERSION/try_or.ts";
+ * import { raise } from "https://deno.land/x/errorutil@$MODULE_VERSION/raise.ts";
  *
  * // Sync
  * console.log(tryOr(() => 1, 2)); // 1
@@ -30,8 +30,8 @@ export function tryOr<T>(
  * Try to execute a function and return the result or execute another function.
  *
  * ```ts
- * import { tryOrElse } from "./try_or.ts";
- * import { raise } from "./raise.ts";
+ * import { tryOrElse } from "https://deno.land/x/errorutil@$MODULE_VERSION/try_or.ts";
+ * import { raise } from "https://deno.land/x/errorutil@$MODULE_VERSION/raise.ts";
  *
  * // Sync
  * console.log(tryOrElse(() => 1, () => 2)); // 1
