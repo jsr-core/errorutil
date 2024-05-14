@@ -1,4 +1,4 @@
-import { is } from "jsr:@core/unknownutil@3.18.0";
+import { is } from "@core/unknownutil";
 
 export type ErrorObject = {
   proto: string;

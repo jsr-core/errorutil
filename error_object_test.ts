@@ -1,4 +1,4 @@
-import { assertEquals, assertInstanceOf } from "jsr:@std/assert@0.225.1";
+import { assertEquals, assertInstanceOf } from "@std/assert";
 import { fromErrorObject, toErrorObject } from "./error_object.ts";
 
 class CustomError extends Error {

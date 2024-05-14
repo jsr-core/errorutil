@@ -15,7 +15,6 @@
     "npm"
   ],
   "tasks": {
-    "build-npm": "deno run -A scripts/build_npm.ts $(git describe --tags --always --dirty)",
     "check": "deno check **/*.ts",
     "test": "deno test -A --doc --parallel --shuffle",
     "test:coverage": "deno task test --coverage=.coverage",
@@ -24,12 +23,14 @@
     "update:commit": "deno task -q update --commit --pre-commit=fmt,lint"
   },
   "imports": {
+    "@core/unknownutil": "jsr:@core/unknownutil@^3.18.0",
     "@lambdalisue/errorutil": "./mod.ts",
     "@lambdalisue/errorutil/error-object": "./error_object.ts",
     "@lambdalisue/errorutil/raise": "./raise.ts",
     "@lambdalisue/errorutil/try-or": "./try_or.ts",
     "@lambdalisue/errorutil/try-or-else": "./try_or_else.ts",
     "@lambdalisue/errorutil/unimplemented": "./unimplemented.ts",
-    "@lambdalisue/errorutil/unreachable": "./unreachable.ts"
+    "@lambdalisue/errorutil/unreachable": "./unreachable.ts",
+    "@std/assert": "jsr:@std/assert@^0.225.1"
   }
 }
