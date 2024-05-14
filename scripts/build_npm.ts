@@ -1,4 +1,4 @@
-import { build, emptyDir } from "@deno/dnt";
+import { build, emptyDir } from "jsr:@deno/dnt";
 
 const name = "@lambdalisue/errorutil";
 const version = Deno.args[0];

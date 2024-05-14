@@ -1,4 +1,4 @@
-import { is, type Predicate } from "@core/unknownutil";
+import { is, type Predicate } from "jsr:@core/unknownutil";
 
 export type ErrorObject = {
   proto: string;
