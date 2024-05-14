@@ -16,7 +16,7 @@ export class UnimplementedError extends Error {
  * For example, defining a mock object with `unimplemented` function should look like this:
  *
  * ```ts
- * import { unimplemented } from "./unimplemented.ts";
+ * import { unimplemented } from "https://deno.land/x/errorutil@$MODULE_VERSION/unimplemented.ts";
  *
  * type Service = {
  *   get(id: string): Promise<string>;

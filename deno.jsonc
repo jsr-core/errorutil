@@ -7,5 +7,8 @@
     "check": "deno check ./**/*.ts",
     "test": "deno test -A --parallel --shuffle --doc --coverage=.coverage",
     "coverage": "deno coverage .coverage"
+  },
+  "imports": {
+    "https://deno.land/x/errorutil@$MODULE_VERSION/": "./"
   }
 }
