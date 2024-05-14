@@ -8,7 +8,7 @@ A utility pack for handling error.
 
 [deno]: https://deno.land/
 
-> [!WARN]
+> [!WARNING]
 >
 > The package on [deno.land] and [npm] is deprecated. Use the package on
 > [jsr.io] instead.
