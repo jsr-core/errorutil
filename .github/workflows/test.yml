@@ -5,12 +5,15 @@ env:
   NODE_VERSION: 16.x
 
 on:
-  schedule:
-    - cron: "0 7 * * 0"
   push:
     branches:
       - main
   pull_request:
+    paths:
+      - "**.md"
+      - "**.ts"
+      - "deno.jsonc"
+      - ".github/workflows/test.yml"
   workflow_dispatch:
 
 jobs:
@@ -40,9 +43,6 @@ jobs:
         run: |
           deno task test
         timeout-minutes: 5
-      - name: JSR publish (dry-run)
-        run: |
-          deno publish --dry-run
 
   build-npm:
     runs-on: ubuntu-latest
@@ -57,3 +57,14 @@ jobs:
           registry-url: "https://registry.npmjs.org"
       - name: Build
         run: deno task build-npm
+
+  jsr-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: ${{ env.DENO_VERSION }}
+      - name: Publish (dry-run)
+        run: |
+          deno publish --dry-run
