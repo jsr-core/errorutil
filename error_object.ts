@@ -3,14 +3,35 @@ import { isRecord } from "@core/unknownutil/is/record";
 import { isObjectOf } from "@core/unknownutil/is/object-of";
 import { asOptional } from "@core/unknownutil/as/optional";
 
+/**
+ * An error object is a serializable representation of an error
+ */
 export type ErrorObject = {
+  /**
+   * The name of the error prototype
+   */
   proto: string;
+  /**
+   * The name of the error
+   */
   name: string;
+  /**
+   * The error message
+   */
   message: string;
+  /**
+   * The error stack
+   */
   stack?: string;
+  /**
+   * Additional attributes
+   */
   attributes: Record<string, unknown>;
 };
 
+/**
+ * Check if a value is an error object
+ */
 export const isErrorObject: (x: unknown) => x is ErrorObject = isObjectOf({
   proto: isString,
   name: isString,

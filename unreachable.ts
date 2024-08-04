@@ -1,3 +1,6 @@
+/**
+ * Error indicating that this part is unreachable.
+ */
 export class UnreachableError extends Error {
   readonly args: unknown[];
 

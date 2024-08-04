@@ -1,3 +1,6 @@
+/**
+ * Error indicating that this part is unimplemented.
+ */
 export class UnimplementedError extends Error {
   constructor(message = "unimplemented") {
     super(message);
