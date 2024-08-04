@@ -3,8 +3,8 @@ import { tryOrElse } from "./try_or_else.ts";
  * Try to execute a function and return the result or a default value.
  *
  * ```ts
- * import { tryOr } from "@lambdalisue/errorutil/try-or";
- * import { raise } from "@lambdalisue/errorutil/raise";
+ * import { tryOr } from "@core/errorutil/try-or";
+ * import { raise } from "@core/errorutil/raise";
  *
  * // Sync
  * console.log(tryOr(() => 1, 2)); // 1

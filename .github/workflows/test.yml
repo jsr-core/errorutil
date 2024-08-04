@@ -2,18 +2,12 @@ name: Test
 
 env:
   DENO_VERSION: 1.x
-  NODE_VERSION: 16.x
 
 on:
   push:
     branches:
       - main
   pull_request:
-    paths:
-      - "**.md"
-      - "**.ts"
-      - "deno.jsonc"
-      - ".github/workflows/test.yml"
   workflow_dispatch:
 
 jobs:

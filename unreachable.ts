@@ -1,3 +1,6 @@
+/**
+ * Error indicating that this part is unreachable.
+ */
 export class UnreachableError extends Error {
   readonly args: unknown[];
 
@@ -19,7 +22,7 @@ export class UnreachableError extends Error {
  * For example, the following code passed type checking.
  *
  * ```ts
- * import { unreachable } from "@lambdalisue/errorutil/unreachable";
+ * import { unreachable } from "@core/errorutil/unreachable";
  *
  * type Animal = "dog" | "cat";
  *
@@ -41,7 +44,7 @@ export class UnreachableError extends Error {
  * But the following code because a case for "bird" is missing.
  *
  * ```ts
- * import { unreachable } from "@lambdalisue/errorutil/unreachable";
+ * import { unreachable } from "@core/errorutil/unreachable";
  *
  * type Animal = "dog" | "cat" | "bird";
  *

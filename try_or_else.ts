@@ -2,8 +2,8 @@
  * Try to execute a function and return the result or execute another function.
  *
  * ```ts
- * import { tryOrElse } from "@lambdalisue/errorutil/try-or-else";
- * import { raise } from "@lambdalisue/errorutil/raise";
+ * import { tryOrElse } from "@core/errorutil/try-or-else";
+ * import { raise } from "@core/errorutil/raise";
  *
  * // Sync
  * console.log(tryOrElse(() => 1, () => 2)); // 1
