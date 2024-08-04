@@ -1,4 +1,7 @@
-import { is } from "@core/unknownutil";
+import { isString } from "@core/unknownutil/is/string";
+import { isRecord } from "@core/unknownutil/is/record";
+import { isObjectOf } from "@core/unknownutil/is/object-of";
+import { asOptional } from "@core/unknownutil/as/optional";
 
 export type ErrorObject = {
   proto: string;
@@ -8,12 +11,12 @@ export type ErrorObject = {
   attributes: Record<string, unknown>;
 };
 
-export const isErrorObject: (x: unknown) => x is ErrorObject = is.ObjectOf({
-  proto: is.String,
-  name: is.String,
-  message: is.String,
-  stack: is.OptionalOf(is.String),
-  attributes: is.Record,
+export const isErrorObject: (x: unknown) => x is ErrorObject = isObjectOf({
+  proto: isString,
+  name: isString,
+  message: isString,
+  stack: asOptional(isString),
+  attributes: isRecord,
 });
 
 /**
