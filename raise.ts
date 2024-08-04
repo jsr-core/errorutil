@@ -4,7 +4,7 @@
  * This is function thus can be used as an expression.
  *
  * ```typescript
- * import { raise } from "@lambdalisue/errorutil/raise";
+ * import { raise } from "@core/errorutil/raise";
  *
  * const fn = () => raise(new Error("fail"));
  * ```

@@ -1,5 +1,5 @@
 {
-  "name": "@lambdalisue/errorutil",
+  "name": "@core/errorutil",
   "version": "0.0.0",
   "exports": {
     ".": "./mod.ts",
@@ -24,13 +24,13 @@
   },
   "imports": {
     "@core/unknownutil": "jsr:@core/unknownutil@^4.0.0",
-    "@lambdalisue/errorutil": "./mod.ts",
-    "@lambdalisue/errorutil/error-object": "./error_object.ts",
-    "@lambdalisue/errorutil/raise": "./raise.ts",
-    "@lambdalisue/errorutil/try-or": "./try_or.ts",
-    "@lambdalisue/errorutil/try-or-else": "./try_or_else.ts",
-    "@lambdalisue/errorutil/unimplemented": "./unimplemented.ts",
-    "@lambdalisue/errorutil/unreachable": "./unreachable.ts",
+    "@core/errorutil": "./mod.ts",
+    "@core/errorutil/error-object": "./error_object.ts",
+    "@core/errorutil/raise": "./raise.ts",
+    "@core/errorutil/try-or": "./try_or.ts",
+    "@core/errorutil/try-or-else": "./try_or_else.ts",
+    "@core/errorutil/unimplemented": "./unimplemented.ts",
+    "@core/errorutil/unreachable": "./unreachable.ts",
     "@std/assert": "jsr:@std/assert@^0.225.1"
   }
 }

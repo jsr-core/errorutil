@@ -1,12 +1,10 @@
 # errorutil
 
-[![JSR](https://jsr.io/badges/@lambdalisue/errorutil)](https://jsr.io/@lambdalisue/errorutil)
-[![Test](https://github.com/lambdalisue/deno-errorutil/workflows/Test/badge.svg)](https://github.com/lambdalisue/deno-errorutil/actions?query=workflow%3ATest)
-[![codecov](https://codecov.io/gh/lambdalisue/deno-errorutil/graph/badge.svg?token=O0cA5Xj5la)](https://codecov.io/gh/lambdalisue/deno-errorutil)
+[![JSR](https://jsr.io/badges/@core/errorutil)](https://jsr.io/@core/errorutil)
+[![Test](https://github.com/jsr-core/errorutil/workflows/Test/badge.svg)](https://github.com/jsr-core/errorutil/actions?query=workflow%3ATest)
+[![Codecov](https://codecov.io/gh/jsr-core/errorutil/graph/badge.svg?token=O0cA5Xj5la)](https://codecov.io/gh/jsr-core/errorutil)
 
 A utility pack for handling error.
-
-[deno]: https://deno.land/
 
 ## License
 

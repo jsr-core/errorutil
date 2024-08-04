@@ -16,7 +16,7 @@ export class UnimplementedError extends Error {
  * For example, defining a mock object with `unimplemented` function should look like this:
  *
  * ```ts
- * import { unimplemented } from "@lambdalisue/errorutil/unimplemented";
+ * import { unimplemented } from "@core/errorutil/unimplemented";
  *
  * type Service = {
  *   get(id: string): Promise<string>;
