@@ -25,7 +25,6 @@
     ]
   },
   "imports": {
-    "@core/unknownutil": "jsr:@core/unknownutil@^4.0.0",
     "@core/errorutil": "./mod.ts",
     "@core/errorutil/error-object": "./error_object.ts",
     "@core/errorutil/raise": "./raise.ts",
@@ -33,6 +32,8 @@
     "@core/errorutil/try-or-else": "./try_or_else.ts",
     "@core/errorutil/unimplemented": "./unimplemented.ts",
     "@core/errorutil/unreachable": "./unreachable.ts",
+    "@core/unknownutil": "jsr:@core/unknownutil@^4.0.0",
+    "@cross/test": "jsr:@cross/test@^0.0.9",
     "@std/assert": "jsr:@std/assert@^1.0.0"
   },
   "tasks": {
