@@ -1,3 +1,4 @@
 /npm
 deno.lock
 .coverage
+node_modules
