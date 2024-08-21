@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "exports": {
     ".": "./mod.ts",
+    "./attempt": "./attempt.ts",
     "./error-object": "./error_object.ts",
     "./raise": "./raise.ts",
     "./try-or": "./try_or.ts",
@@ -20,12 +21,14 @@
       "LICENSE"
     ],
     "exclude": [
+      "**/*_bench.ts",
       "**/*_test.ts",
       ".*"
     ]
   },
   "imports": {
     "@core/errorutil": "./mod.ts",
+    "@core/errorutil/attempt": "./attempt.ts",
     "@core/errorutil/error-object": "./error_object.ts",
     "@core/errorutil/raise": "./raise.ts",
     "@core/errorutil/try-or": "./try_or.ts",

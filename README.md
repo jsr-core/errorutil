@@ -6,6 +6,26 @@
 
 A utility pack for handling error.
 
+## attempt
+
+`attempt` is a function that executes a function and returns the result
+(`[error: unknown, value: T]`). If the function is successful, it returns
+`[undefined, value]`. If the function throws an error, it returns
+`[error, undefined]`.
+
+```ts
+import { assertEquals } from "@std/assert";
+import { attempt } from "@core/errorutil/attempt";
+
+assertEquals(attempt(() => 42), [undefined, 42]);
+assertEquals(
+  attempt(() => {
+    throw "err";
+  }),
+  ["err", undefined],
+);
+```
+
 ## ErrorObject
 
 `ErrorObject` is a class that wraps an error object for serialization. It is
