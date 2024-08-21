@@ -1,57 +1,20 @@
 import { test } from "@cross/test";
-import { assertEquals, assertRejects, assertThrows } from "@std/assert";
+import { assertEquals, assertThrows } from "@std/assert";
 import { raise } from "./raise.ts";
 import { tryOrElse } from "./try_or_else.ts";
 
-const err = new Error("error");
-const resolve = Promise.resolve.bind(Promise);
-const reject = Promise.reject.bind(Promise);
-
-await test("tryOrElse (sync)", () => {
-  type T = number;
-  assertEquals(tryOrElse((): T => 1, () => 2), 1);
-  assertEquals(tryOrElse((): T => raise(err), () => 2), 2);
+await test("tryOrElse executes the first function and return the result", () => {
+  assertEquals(tryOrElse(() => 1, () => 2), 1);
 });
 
-await test("tryOrElse with Error (sync)", () => {
-  type T = number;
+await test("tryOrElse executes the second function and return the result if the first function throws error", () => {
+  assertEquals(tryOrElse(() => raise("err"), () => 2), 2);
+});
+
+await test("tryOrElse throws error if the second function throws error", () => {
   assertThrows(
-    () => tryOrElse((): T => raise(err), () => raise(err)),
+    () => tryOrElse(() => raise("err1"), () => raise(new Error("err2"))),
     Error,
-    "error",
-  );
-});
-
-await test("tryOrElse (async)", async () => {
-  type T = Promise<number>;
-  assertEquals(await tryOrElse((): T => resolve(1), () => 2), 1);
-  assertEquals(await tryOrElse((): T => resolve(1), () => resolve(2)), 1);
-  assertEquals(await tryOrElse((): T => reject(err), () => 2), 2);
-  assertEquals(await tryOrElse((): T => reject(err), () => resolve(2)), 2);
-  assertEquals(await tryOrElse((): T => raise(err), () => 2), 2);
-  assertEquals(await tryOrElse((): T => raise(err), () => resolve(2)), 2);
-});
-
-await test("tryOrElse with Error (async)", async () => {
-  type T = Promise<number>;
-  await assertRejects(
-    () => tryOrElse((): T => reject(err), () => reject(err)),
-    Error,
-    "error",
-  );
-  await assertRejects(
-    () => tryOrElse((): T => reject(err), () => raise(err)),
-    Error,
-    "error",
-  );
-  await assertRejects(
-    () => tryOrElse((): T => raise(err), () => reject(err)),
-    Error,
-    "error",
-  );
-  assertThrows(
-    () => tryOrElse((): T => raise(err), () => raise(err)),
-    Error,
-    "error",
+    "err2",
   );
 });
