@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "exports": {
     ".": "./mod.ts",
+    "./alter": "./alter.ts",
+    "./alter-else": "./alter_else.ts",
     "./attempt": "./attempt.ts",
     "./error-object": "./error_object.ts",
     "./raise": "./raise.ts",
@@ -28,6 +30,8 @@
   },
   "imports": {
     "@core/errorutil": "./mod.ts",
+    "@core/errorutil/alter": "./alter.ts",
+    "@core/errorutil/alter-else": "./alter_else.ts",
     "@core/errorutil/attempt": "./attempt.ts",
     "@core/errorutil/error-object": "./error_object.ts",
     "@core/errorutil/raise": "./raise.ts",

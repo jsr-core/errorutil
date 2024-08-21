@@ -6,6 +6,30 @@
 
 A utility pack for handling error.
 
+## alter / alterElse
+
+`alter` and `alterElse` are functions that execute a function and return the
+result. If the function throws an error, `alter` throws the given error, and
+`alterElse` throws the result of the second function.
+
+```ts
+import { assertThrows } from "@std/assert";
+import { alter } from "@core/errorutil/alter";
+import { alterElse } from "@core/errorutil/alter-else";
+
+const fn = () => {
+  throw new Error("This is an error message");
+};
+
+assertThrows(() => alter(fn, new Error("custom error")), Error, "custom error");
+
+assertThrows(
+  () => alterElse(fn, () => new Error("custom error")),
+  Error,
+  "custom error",
+);
+```
+
 ## attempt
 
 `attempt` is a function that executes a function and returns the result
