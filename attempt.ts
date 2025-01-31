@@ -16,10 +16,10 @@ export type Result<T, E> = Success<T> | Failure<E>;
  * console.log(attempt(() => { throw "err" })); // ["err", undefined]
  * ```
  */
-export function attempt<T, E>(fn: () => T): Result<T, E> {
+export function attempt<T, E = unknown>(fn: () => T): Result<T, E> {
   try {
     return [undefined, fn()];
   } catch (e) {
-    return [e, undefined];
+    return [e as E, undefined];
   }
 }

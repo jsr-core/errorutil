@@ -8,10 +8,11 @@
  * @example
  *
  * ```ts
+ * import { assertThrows } from "@std/assert";
  * import { alter } from "@core/errorutil/alter";
  *
  * console.log(alter(() => 1, "err2")); // 1
- * console.log(alter(() => { throw "err1" }, "err2")); // "err2" is thrown
+ * assertThrows(() => alter(() => { throw "err1" }, "err2"), "err2"); // "err2" is thrown
  * ```
  */
 export function alter<T, E>(fn: () => T, alt: E): T {

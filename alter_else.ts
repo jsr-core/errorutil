@@ -8,10 +8,11 @@
  * @example
  *
  * ```ts
+ * import { assertThrows } from "@std/assert";
  * import { alterElse } from "@core/errorutil/alter-else";
  *
  * console.log(alterElse(() => 1, () => "err")); // 1
- * console.log(alterElse(() => { throw "err" }, (err) => "new " + err)); // "new err" is thrown
+ * assertThrows(() => alterElse(() => { throw "err" }, (err) => "new " + err), "new err"); // "new err" is thrown
  * ```
  */
 export function alterElse<T, E>(fn: () => T, elseFn: (err: unknown) => E): T {

@@ -1,3 +1,5 @@
+export * from "./alter.ts";
+export * from "./alter_else.ts";
 export * from "./attempt.ts";
 export * from "./error_object.ts";
 export * from "./raise.ts";
