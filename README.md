@@ -55,10 +55,10 @@ assertEquals(
 
 ## asyncAttempt
 
-`asyncAttempt` is a function that executes a async function and returns the result
-(`Promise<[error: unknown, value: T]>`). If the function is successful, it returns
-`Promise.resolve([undefined, value])`. If the function throws an error, it returns
-`Promise.resolve([error, undefined])`.
+`asyncAttempt` is a function that executes a async function and returns the
+result (`Promise<[error: unknown, value: T]>`). If the function is successful,
+it returns `Promise.resolve([undefined, value])`. If the function throws an
+error, it returns `Promise.resolve([error, undefined])`.
 
 ```ts
 import { assertEquals } from "@std/assert";
