@@ -10,7 +10,7 @@ export type AsyncResult<T, E> = Promise<Result<T, E>>;
  *
  * @example
  * ```ts
- * import { asyncAttempt } from "@core/errorutil/async_attempt";
+ * import { asyncAttempt } from "@core/errorutil/async-attempt";
  *
  * console.log(await asyncAttempt(async () => 1)); // [undefined, 1]
  * console.log(await asyncAttempt(async () => { throw "err" })); // ["err", undefined]
