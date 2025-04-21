@@ -5,6 +5,7 @@
     ".": "./mod.ts",
     "./alter": "./alter.ts",
     "./alter-else": "./alter_else.ts",
+    "./async-attempt": "./async_attempt.ts",
     "./attempt": "./attempt.ts",
     "./error-object": "./error_object.ts",
     "./raise": "./raise.ts",
@@ -13,25 +14,16 @@
     "./unimplemented": "./unimplemented.ts",
     "./unreachable": "./unreachable.ts"
   },
-  "exclude": [
-    ".coverage/**"
-  ],
+  "exclude": [".coverage/**"],
   "publish": {
-    "include": [
-      "**/*.ts",
-      "README.md",
-      "LICENSE"
-    ],
-    "exclude": [
-      "**/*_bench.ts",
-      "**/*_test.ts",
-      ".*"
-    ]
+    "include": ["**/*.ts", "README.md", "LICENSE"],
+    "exclude": ["**/*_bench.ts", "**/*_test.ts", ".*"]
   },
   "imports": {
     "@core/errorutil": "./mod.ts",
     "@core/errorutil/alter": "./alter.ts",
     "@core/errorutil/alter-else": "./alter_else.ts",
+    "@core/errorutil/async-attempt": "./async_attempt.ts",
     "@core/errorutil/attempt": "./attempt.ts",
     "@core/errorutil/error-object": "./error_object.ts",
     "@core/errorutil/raise": "./raise.ts",

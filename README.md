@@ -41,9 +41,32 @@ assertThrows(
 import { assertEquals } from "@std/assert";
 import { attempt } from "@core/errorutil/attempt";
 
-assertEquals(attempt(() => 42), [undefined, 42]);
+assertEquals(
+  attempt(() => 42),
+  [undefined, 42],
+);
 assertEquals(
   attempt(() => {
+    throw "err";
+  }),
+  ["err", undefined],
+);
+```
+
+## asyncAttempt
+
+`asyncAttempt` is a function that executes a async function and returns the
+result (`Promise<[error: unknown, value: T]>`). If the function is successful,
+it returns `Promise.resolve([undefined, value])`. If the function throws an
+error, it returns `Promise.resolve([error, undefined])`.
+
+```ts
+import { assertEquals } from "@std/assert";
+import { asyncAttempt } from "@core/errorutil/async-attempt";
+
+assertEquals(await asyncAttempt(async () => 42), [undefined, 42]);
+assertEquals(
+  await asyncAttempt(async () => {
     throw "err";
   }),
   ["err", undefined],
