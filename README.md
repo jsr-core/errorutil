@@ -62,7 +62,7 @@ error, it returns `Promise.resolve([error, undefined])`.
 
 ```ts
 import { assertEquals } from "@std/assert";
-import { attempt } from "@core/errorutil/attempt";
+import { asyncAttempt } from "@core/errorutil/async-attempt";
 
 assertEquals(await asyncAttempt(async () => 42), [undefined, 42]);
 assertEquals(
