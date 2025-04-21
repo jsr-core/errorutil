@@ -1,4 +1,4 @@
-import { Result } from "./attempt.ts";
+import type { Result } from "./attempt.ts";
 
 export type AsyncResult<T, E> = Promise<Result<T, E>>;
 
